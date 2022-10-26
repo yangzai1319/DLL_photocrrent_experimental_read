@@ -1,0 +1,33 @@
+3353# （判断电压比较器与AD敏感性）
+
+CH1 电压比较器输出-10MHz方波 0-5V （直接输出,未经过FPGA）
+CH2 AD比较输出-10MHz方波 0-3.3V（经过FPGA处理为方波后通过FPGA引出）
+CH3 电压比较器输出-10MHz方波 0-3.3V（经过FPGA内部互联后由FPGA的IO输出）
+
+3288＃（判断AD敏感性）
+
+CH1 AD给FPGA随路时钟-50MHz方波 0-3.3V（通过FPGA互联输出，未经过FPGA的PLL）
+CH2 FPGA给AD采样时钟-50MHz方波 0-3.3V（通过FPGA的IGbuffer给AD，未经过FPGA的PLL）
+CH3 DA给FPGA随路时钟-50MHz 0-3.3V（本应为400MHz，经FPGA的PLL锁相后由FPGA的IO输出50MHz）
+CH4 5V光电流（用TCP300A测试）
+
+15806# （判断DA敏感性）
+
+CH1 空载（只有线的输出）
+CH2 DA直接输出-100MHz正弦波 按功率算（DA直接输出）
+CH3 DA复位信号 - 低电平 0V 
+
+
+3333# （判断FPGA时钟敏感性）
+
+CH1 FPGA IGbuffer输出 - 50MHz时钟输出方波 0-3.3V（信号通过时钟管脚输入）
+CH2 FPGA IGbuffer+PLL - 50MHz时钟输出方波 0-3.3V（信号通过时钟管脚输入）
+CH3 FPGA IGbuffer+DCM - 50MHz时钟输出方波 0-3.3V（信号通过时钟管脚输入）
+CH4 FPGA IO直接输出 - 50MHz时钟输出方波 0-3.3V （信号通过IO输入后，再通过IO输出）
+
+40789#（判断FPGA IO与电平驱动器敏感性）
+
+CH1 FPGA输出 - IO输出常0-0V
+CH2 FPGA输出 - IO输出常1-3.3V
+CH3 电平驱动器 - IO输出常0-0V
+CH4 电平驱动器 - IO输出常1-5V

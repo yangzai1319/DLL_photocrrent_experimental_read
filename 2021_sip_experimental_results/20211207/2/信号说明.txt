@@ -1,0 +1,34 @@
+3353#
+
+CH1 电压比较器输出-10MHz （通过FPGA引出）
+CH2 AD-10MHz比较输出（通过FPGA引出）
+CH3 电压比较器输入
+
+3288＃
+
+CH1 AD给FPGA时钟-100MHz（通过FPGA输出）
+CH2
+CH3 FPGA-50M时钟输出（直接输出）
+CH4 FPGA-IO输出常0
+
+15806#
+
+CH1 FPGA-IO输出常1
+CH2 （FPGA给）电平驱动器输出常1
+CH3 （FPGA给）电平驱动器输出常0
+CH4 DA给FPGA200MHz时钟-通过FPGA引出
+
+3333#
+
+CH1 FPGA给AD100MHz时钟-通过FPGA输出
+CH2 DA复位信号-通过FPGA输出
+CH3 FPGA内部DCM-50MHz时钟输出
+CH4 FPGA内部PLL-50MHz时钟输出
+
+40789#
+
+CH1 50M时钟输出-信号源输入，由FPGA的IO输出
+CH2 DA的输出
+
+
+
